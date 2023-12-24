@@ -5,7 +5,8 @@
     box-sizing: border-box;
 }
 :root {
-    --glow-color: hsl(175, 100%, 71%);
+    --glow-color: hsl(299, 98%, 56%);
+    --pink-gradient:linear-gradient(to right,#2605ba,#5905c7,#8900F2,#A100f2,#B100E8,#BC00DD,#D100D1,#DB00D6,#E500A4,#ca0073);
   }
 body
 {
@@ -27,7 +28,9 @@ body
     position: relative;
 }
 h1{
-    color:var(--glow-color);
+    background:var(--pink-gradient);
+    color: transparent;
+    background-clip: text;
     font-family:cursive;
     font-size: xx-large;
 }
@@ -35,7 +38,7 @@ h1{
 {
     width:100%;
     height: 100%;
-    padding:1vmin 4vmin;
+    padding:2vmin 4vmin;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
@@ -66,19 +69,22 @@ h1{
         box-shadow: 0px 0px 4px 1px  var(--glow-color);
     }
     50%{
-        box-shadow: 0px 0px 15px 5px var(--glow-color);
+        box-shadow: 0px 0px 15px 8px var(--glow-color);
     }
     60%{
         box-shadow: 0px 0px 4px 1px var(--glow-color);
     }
     100%{
-        box-shadow: 0px 0px 15px 5px var(--glow-color);
+        box-shadow: 0px 0px 15px 8px var(--glow-color);
     }
 }
 .message-container
 {
     height: 100vh;
-    color: var(--glow-color);
+    background: var(--pink-gradient);
+    color: transparent;
+    background-clip: text;
+
     text-align: center;
 }
 .message-container p{
@@ -87,10 +93,10 @@ h1{
 }
 .btn
 {
-    padding:2vmin;
+    padding:2vmin 3vmin;
     color: black;
     font-weight: 600;
-    background-color: aquamarine;
+    background-image:var(--pink-gradient);
     border: none;
     border-radius: 2vmin;
     cursor: pointer;
